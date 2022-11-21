@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Share Your Reviews</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+
+</head>
+
+
+
+<body class="bgcol">
+
+    <div class="barreview">
+
+        <div class="logoreview">
+            <img src="images/ACCOMMODOLOGO-removebg-preview.png" height="100%" width="100%">
+        </div>
+
+        <div class="navireview">
+
+            <ul>
+                <li> <a class="nav-items" href="/Welcomepage.html" > Home</a> </li>
+                <li> <a class="nav-items" href="/Welcomepage.html">About</a> </li>
+                <li> <a class="nav-items" href="/homestay.html" > </a>Home Stays</a> </li>
+                <li> <a class="nav-items" href="/hostel.html" >Hostels</a> </li>
+                <li> <a class="nav-items" href="/rental.html" >Rentals</a> </li>
+                <li> <a class="nav-items" href="/review.html" style="color:#3f9cc1 ;">Reviews</a> </li>
+                <li> <a class="nav-items" href="/contact-form.html" >Contact</a> </li>
+                
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="students container grey-text text-darken-1">
+                     
+    </div>
+
+    <div class="center">
+        <a class="btn-floating btn-small add-btn sidenav-trigger" data-target="side-form">
+            <i class="material-icons" style="color: black;">add</i>
+        </a>
+    </div>
+
+    <!--add new review form-->
+    <div id="side-form" class="sidenav side-form">
+        <form class="add-student container section">
+            <h5 style="color:white">Share Your Experience Here</h5>
+            
+            <div class="input-field">
+                <input  id="name" type="text" class="validate">
+                <label for="name">Your Name</label>
+            </div>
+
+            <div class="input-field">
+                <input  id="property" type="text" class="validate">
+                <label for="name">Name Of Property</label>
+            </div>
+
+            <div class="input-field">
+                <input  id="id" type="text" class="validate" autocomplete="off">
+                <label for="id">Your Experience</label>
+            </div>
+            <div class="input-field center">
+                <button class="btn">Add</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js"></script>
+
+
+
+<script>
+  //  web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAxBxZq0c2K-ymWlBeXRBMrfT-L5w6ud90",
+    authDomain: "jw-online-register-cabf7.firebaseapp.com",
+    projectId: "jw-online-register-cabf7",
+    storageBucket: "jw-online-register-cabf7.appspot.com",
+    messagingSenderId: "607064039233",
+    appId: "1:607064039233:web:d45aef661187a9b0780bc0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+      
+<script type="text/javascript" src="/js/db.js"></script>
+<script type="text/javascript" src="/js/ui.js"></script>
+</body>
+</html>

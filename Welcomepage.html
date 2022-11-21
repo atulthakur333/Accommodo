@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/Hotelstyle.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="images/ACCOMMODOLOGO-removebg-preview.png"> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="/index.html"  class="nav-link" style="color: #3f9cc1;">Home</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="/homestay.html" class="nav-link">Home Stays</a> </li>
+          <li> <a href="/hostel.html"  class="nav-link">Hostels</a> </li>
+          <li> <a href="/rental.html"    class="nav-link">Rentals</a> </li>
+          <li> <a href="/review.html"   class="nav-link">Reviews</a> </li>
+          <li> <a href="/contact-form.html"  class="nav-link">Contact</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="texts">
+          <h1>Hello</h1>
+          <p class="para-background2">Accomodo, a one stop destination for all your accomodation needs , 
+            from multiple day's stay at home stays to monthly rental Houses....
+            Accomodo provides you with the wide variety of accomodation options 
+            that are not tooo heavy on your pocket. No matter where you are, feel like home with us. </p>
+          <a href="/Welcomepage.html"> <button id="buttn1">MORE INFO</button> </a>
+        </div>
+      </div>
+      <div class="image">
+        <img src="/images/home1.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="/images/home1.jpg"  class="slide active" onmouseover="img('/images/home1.jpg')">
+        <img src="/images/home2.jpg"  class="slide active" onmouseover="img('/images/home2.jpg')">
+        <img src="/images/home3.jpg"  class="slide active" onmouseover="img('/images/home3.jpg')">
+        <img src="/images/home4.jpg"  class="slide active" onmouseover="img('/images/home4.jpg')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+  <section class="book" data-aos="zoom-in">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>Check-in:</label>
+          <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+          <label>Check-out:</label>
+          <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+          <label>No. Of Guests:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+          <label>Accommodation Type:</label> <br>
+          <input type="text">
+        </div>
+      </div>
+      <div class="search" >
+        <a href="/hostel.html"> <input type="submit" value="SEARCH"> </a> 
+      </div>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="images/homestay5.png" alt="" class="image1" data-aos="fade-up-right">
+          <img src="images/homestay4.png" alt="" class="image2" data-aos="fade-up-right">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading"  data-aos="zoom-out-right">
+          <h5 data-aos="fade-up-right" >RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+          <h2 data-aos="fade-up-right" class="typeheading">Home Stays</h2>
+          <p data-aos="fade-up-right" class="about-property">Combination of hospitality and comfortness is here. 
+            Staying in a homestay gives an enriching and immersive experience. Live in an informal setting and get an opportunity
+            to interact with hosts and co-travelers, experience the local culture & traditions and taste Indias rich cuisine
+            prepared by locals. Homestay owners host their spaces in many ditterent ways, which makes each homestay
+            experience unique and full of discovery. Offers a unique kind
+            of travel experience. Feels like home, no matter wherever you are. Our secure online booking system, 
+            complete with reviews gives you peace of mind that your accommodation is now sorted. Our partner Home Stays in
+            Manali provides accommodations with a shared lounge, free WiFi, a shared kitchen, and room service.
+            </p>
+          
+          <a href="/homestay.html" ><button class="btn1" data-aos="fade-up-right">BOOK NOW</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="heading"  data-aos="zoom-out-left">
+          <h5  data-aos="fade-up-left">LIVE IT NOW </h5>
+          <h2  data-aos="fade-up-left" class="typeheading">Hostels</h2>
+          <p   data-aos="fade-up-left"class="about-property">The definition of traveling entails visiting new places, sampling 
+            delectable cuisines, and enjoying a fantastic trip. 
+              Even though your stay is brimming with amenities, it is seldom used entirely.What if we tell you that you can have all 
+              the amenities like hotel travelers but not in a hotel? Experience the hostels with a homestay experience, all
+               under one roof at an unbelievable price. Apart from the cheap 
+                valued stay experience as the major difference between hotel and hostel ,staying at any hostel accommodations comes at a way 
+                cheaper price, and amenities that you can actually fully make use of.Popular among the western 
+                culture, the idea of hostel accommodations is a unique selling point with extremely low prices.
+              
+           
+            </p>
+          
+            <a href="/hostel.html"><button class="btn1" data-aos="fade-up-left">BOOK NOW</button></a>
+        </div>
+        
+      </div>
+      <div class="right1">
+        <div class="img">
+          <img src="/images/display-hostel3.png" alt="" class="image1"  data-aos="fade-up-left">
+          <img src="/images/display-hostel1.png" alt="" class="image2"  data-aos="fade-up-left">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about top" id="about">
+    <div class="container flex" >
+      <div class="left">
+        <div class="img">
+          <img src="/images/rental4.png" alt="" class="image1" data-aos="fade-up-right" >
+          <img src="/images/rental2.png" alt="" class="image2" data-aos="fade-up-right">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading" data-aos="zoom-out-right">
+          <h5 data-aos="fade-up-right">GO FOR LOCALES AND STAY FOR TRANQUILITY</h5>
+          <h2 data-aos="fade-up-right" class="typeheading">Rentals</h2>
+          <p data-aos="fade-up-right" class="about-property">When it comes to travelling in a large group, it's a no brainer to go
+             for vacation rentals, they are definitely cheaper. You can share common areas like living rooms, backyards and swimming
+              pools, plus get t spend more time together. Imagine booking separate rooms in a hotel for a larger group. 
+              Solo travellers or couples can go either way.You can save big bucks on dining outside and create beautiful memories 
+              preparing your own food and sharing them with your loved ones. Hotel rates are set in stone. They are non-negotiable,
+               no matter how many puppy dog faces you make at the reception. You can talk to the hosts before you actually 
+               book the property. You can ask the hosts to lower the rate just a wee bit. They may rent it for a little less
+            </p>
+          
+            <a href="/rental.html"><button class="btn1" data-aos="fade-up-right">BOOK NOW</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text"  data-aos="zoom-in-right">
+        <h2 data-aos="fade-left">Our Amenities</h2>
+        <p class="about-place" data-aos="fade-left">With homestays propping up, many are choosing
+           homestays over hotels, some are skeptical, how the experience would be living in someone else's house.
+          Keeping in mind we provide all the amenities necessary for a comfortable stay. </p>
+        <br>
+        <div class="places" data-aos="fade-left">
+          <div class="box flex">
+            <i class="fas fa-fire"></i>
+            <span>Fun Beyond Bonfire And Music</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Exercise With Breathtaking View</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>Relaxing Massage</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-hat-chef"></i>
+            <span>Home Cooked Delicacies</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-wifi"></i>
+            <span>High Speed Internet</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span>Surfing Lessons</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="text1"   data-aos="zoom-in-up">
+        <h2 data-aos="fade-left">Explore The Unexplored</h2>
+        <p class="about-place" data-aos="fade-left"> Manali, a hill-station that never disappoints visitors.
+           Though it's a popular tourist destination, many unique experiences that it offers. With the most serene cascades that greet you with aromatic air, dense silver birch trees and pristine views.</p>
+        
+        <br>
+
+        <div class="places" data-aos="fade-left">
+
+          <div class="box flex">
+            <i class="fas fa-circle" style="font-size:12px"></i>
+            <span>The Scienic Rohtang Pass</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-circle" style="font-size:12px"></i>
+            <span>Historic Hadimba Temple</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-circle" style="font-size:12px"></i>
+            <span>Rushing Cascades Of Jogini Falls</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-circle" style="font-size:12px"></i>
+            <span>The Happening Mall Road</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-circle" style="font-size:12px"></i>
+            <span>Gigantic Atal Tunnel</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-circle" style="font-size:12px"></i>
+            <span>Sissu a Tiny Beautiful Hamlet</span>
+          </div>
+
+        </div>
+    
+      </div>
+
+      <div class="text2"  data-aos="zoom-in-left">
+        <h2 data-aos="fade-left" data-aos="fade-left">Push The Limits </h2>
+        <p class="about-place" data-aos="fade-left" >Manali is a land of contrasts. There is an endless number of things to do in Manali
+          for fun and peace. On one hand are the enduring high peaks that surround this beauty. Add to this the spice of adventure sports, 
+          crystal clear falls, peaceful temples. </p>
+        <br>
+        <div class="places" data-aos="fade-left">
+          <div class="box flex">
+            <i class="fas fa-mountain"></i>
+            <span>Trek To Beas Kund</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-parachute-box"></i>
+            <span>Paragliding</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span>River Rafting In Kullu</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-motorcycle"></i>
+            <span>Bike Ride</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-pizza-slice"></i>
+            <span>Cafe</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Shopping</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="empty"></div>
+
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading" data-aos="fade-left">
+          <h5>SLAY TOGETHER STAY TOGETHER</h5>
+          <h2>Book Us For</h2>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box" data-aos="zoom-out-right">
+          <div class="img">
+            <img src="images/vacation.png" alt="">
+          </div>
+          <div class="textnew" data-aos="fade-left">
+            <h3>VACATION</h3>
+            <p> <span>Let the mighty mountains of Manali raise your spirits! Enjoy a memorable vaction in hills where you will love camping , trekking , paragliding ,hiking and  mesmerizing views of nature. You will love sightseeing and the surreal vistas of snow-capped mountains .</span> </p>
+          </div>
+        </div>
+        <div class="box" data-aos="zoom-in">
+          <div class="img">
+            <img src="/images/workation.png" alt="">
+          </div>
+          <div class="textnew" data-aos="fade-left">
+            <h3>WORKATION</h3>
+            <p> <span>Having coffee while being lost into the views in front, a beautiful day you spend with your laptop and an amazing view to look for in the back. And the day ends with a walk into the wood. That's how your day goes while you work from the mountains.</span> </p>
+          </div>
+        </div>
+        <div class="box" data-aos="zoom-out-left">
+          <div class="img">
+            <img src="/images/staycation3.png" alt="">
+          </div>
+          <div class="textnew" data-aos="fade-left">
+            <h3>STAYCATION</h3>
+            <p> <span> Comfort from a vacation may just come by looking at the tranquil view from the balcony, going to the market , and then having a cozy meal with people you love. Or it is just simply staying together, spending hours and hours with your family and friends.</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top" data-aos="zoom-in">
+    <div class="container" >
+      <div class="textreview2">
+        <div class="heading" data-aos="fade-left">
+          <h5 style="color: white;">AT THE HEART OF COMMUNICATION</h5>
+          <h2 style="color:white;">People Say</h2>
+        </div>
+
+        <div class="para" data-aos="zoom-in">
+
+
+          <div class="para1" data-aos="zoom-in">     
+
+            <p class="para-background" >Getting my bookings done through ACCOMMODO made my travel a special one. 
+              I recently went to Manali and was looking for some local stays and then i came across ACCOMMODO. 
+              The application is so user-friendly and it has been great! The prices were so reasonable. M in love 💗 with ACCOMMODO. cheers!!🥂
+            </p>
+
+            <div class="box flex">
+
+              <div class="name">
+                <h5>Rishabh Gupta</h5>
+                <h5>Lucknow</h5>
+            </div>
+          </div>
+
+          <br>
+          <div class="para1">
+            
+            <p class="para-background">Combination of hospitality and best location is here. 
+              Nice ambience,  Good hospitality by the host with very delicious food, comfy beds and clean rooms.
+               Offers a unique kind of travel experience. Feel at home, no matter wherever you are..Sending lots of love to each and every one of them.
+              Highly recommending this website for all your booking needs for your next Manali trip :)
+            </p>
+
+            <div class="box flex">
+              <div class="name">
+                <h5>Aaditi Kapoor</h5>
+                <h5>Delhi</h5>
+            </div>
+          </div>
+          <br>
+          
+
+          <br>
+
+          <a href="/review.html"><button id="button-rev"> More Info </button></a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+  
+  <section class="gallary mtop " id="gallary" >
+    <div class="container">
+
+      <br>
+      <br>
+      <br>
+
+      <div class="heading_top flex1">
+        <div class="heading" data-aos="fade-left">
+          <h5>A Glimpse Of Our Properties</h5>
+          <h2>Photo Gallery </h2>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme" data-aos="zoom-in">
+        <div class="item">
+          <img src="/images/glimpse1.png" >
+        </div>
+        <div class="item">
+          <img src="/images/glimpse2.png" >
+        </div>
+        <div class="item">
+          <img src="/images/glimpse3.png" >
+        </div>
+        <div class="item">
+          <img src="/images/glimpse4.png" >
+        </div>
+        <div class="item">
+          <img src="/images/glimpse5.png" >
+        </div>
+        <div class="item">
+          <img src="/images/glimpse6.png" >
+        </div>
+        <div class="item">
+          <img src="/images/glimpse7.png" >
+        </div>
+        <div class="item">
+          <img src="/images/glimpse8.png" >
+        </div>
+        <div class="item">
+          <img src="/images/glimpse9.png" >
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+  <section class="map top" data-aos="zoom-in">
+
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26997.532381773548!2d77.16961018406698!3d32.239470842790325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39048708163fd03f%3A0x8129a80ebe5076cd!2sManali%2C%20Himachal%20Pradesh!5e0!3m2!1sen!2sin!4v1665692021970!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+
+  <footer class="foot" id="footer1" data-aos="zoom-in">
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        <p> We accept all types of payment options including UPI, American Express, Diner's Club, Master Card, Visa, Slice Card .</p>
+
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Company</h3>
+
+        <ul>
+          <li>FAQs</li>
+          <li>Careers</li>
+          <li>Privacy</li>
+          <li>User Agreement</li>
+          <li>Social Responsibility</li>
+          
+          
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <li>About ACCOMMODO</li>
+          <li>Customer Care/Help</li>
+          <li>Corporate Accounts</li>
+          <li>Financial Information</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Contact Us</h3>
+
+        <ul>
+          <li>3015 Grand Ave, Arena Square , Hyderabad </li>
+          <li><i class="far fa-envelope"></i>accommodo@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-comments"></i>24/ 7 Customer Services </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="finalfooter">
+    <p>All trademarks, logos and names are properties of their respective owners. All Rights Reserved. © Copyright 2022 ACCOMMODO Realty Services Limited.</p>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration:1000,
+      offset:200
+    });
+  </script>
+
+  <script>
+    $('a[href*="#"]').on('click',function(e) {
+      e.preventDefault();
+      var target = this.hash;
+      var $target = $(target);
+      $('html, body').stop().animate({
+       'scrollTop': $target.offset().top
+      }, 900, 'swing', function () {
+       window.location.hash = target;
+      });
+     });
+  </script>
+  <script src="/js/auth.js"></script>
+
+</body>
+
+</html>

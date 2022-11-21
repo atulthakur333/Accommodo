@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login / SignUp</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+</head>
+
+<!--top nav--> 
+
+<body class="container1">
+  <nav class="z-depth-0">
+    <br>
+    <div class="header">
+
+      <div class="logo">
+        <img src="/images/ACCOMMODOLOGO-removebg-preview.png" height="100%" width="100%">
+      </div>
+
+      <div class="heading">
+        <span>LOGIN</span>
+      </div>
+
+    </div>
+  </nav>
+  <!-- end of top nav -->
+
+
+  <!-- login page form -->
+  <div class="students container grey-text text-darken-1">
+    <form class="add-student container section" id="login-form">
+      <br>
+      <br>
+      <br>
+      
+      <div class="input-field">
+        <input id="login-email" type="email" class="validate">
+        <label for="email" >Email id</label>
+      </div>
+      <div class="input-field">
+        <input id="login-password" type="password" class="validate" autocomplete="off">
+        <label for="pass">Password</label>
+      </div>
+      <a href="/" class="waves-effect">
+        <p>Forget Your Password?</p>
+      </a>
+      </br>
+      <a href="/" class="waves-effect sidenav-trigger" data-target="side-form">
+        <p>New User? Sign Up</p>
+      </a>
+      </br>
+      <div class="input-field center">
+        <button class="btn-small" type="submit" id="btnLogin">Login</button>
+      </div>
+    </form>
+  </div>
+  <!-- end of login page form -->
+
+  <!-- new user registration side nav -->
+  <div id="side-form" class="sidenav side-form">
+    <form class="add-student container section" id="signup-form">
+      <h6>New User Registration</h6>
+      
+
+      <div class="input-field">
+        <input  id="email" type="text" class="validate" autocomplete="off">
+        <label for="email">Email Id </label>
+      </div>
+
+      <div class="input-field">
+        <input  id="pass1" type="password" class="validate" autocomplete="off">
+        <label for="pass1">Create Password</label>
+      </div>
+
+
+      <div class="input-field center">
+        <button class="btn-small" type="submit">Create Account</button>
+      </div>
+    </form>
+  </div>
+  <!-- end of new user registration side nav -->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+
+
+
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyA1fre_eaGJpfNVZ8AhlAKqm4hO2OXYUhU",
+    authDomain: "accomodo-54547.firebaseapp.com",
+    projectId: "accomodo-54547",
+    storageBucket: "accomodo-54547.appspot.com",
+    messagingSenderId: "840868071212",
+    appId: "1:840868071212:web:9e4052db490471647b4e89",
+    measurementId: "G-090HMR1JQZ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+</script>
+
+
+ <script src="/js/auth.js"></script>
+  <script src="/js/ui.js"></script>
+</body>
+</html>
